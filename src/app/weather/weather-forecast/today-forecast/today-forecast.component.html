@@ -1,0 +1,11 @@
+<div
+  class="hours__weather-container {{ hour == +hourCurrent ? 'active' : '' }}"
+>
+  <div class="hours__time">{{ time() }}</div>
+  <img
+    src="{{ hourData.condition.icon }}"
+    alt="weather-sign"
+    class="weather-sign"
+  />
+  <div class="hours__temp">{{ temprature() }}<span>&deg;</span></div>
+</div>

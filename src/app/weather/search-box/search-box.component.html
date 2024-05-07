@@ -1,0 +1,10 @@
+<div class="search__weather-box" [ngClass]="{ toggle: searchToggle }">
+  <form [formGroup]="searchForm" (keydown.enter)="onSubmit()">
+    <input
+      type="text"
+      class="search__weather-input"
+      placeholder="Search for cities"
+      formControlName="searchValue"
+    />
+  </form>
+</div>

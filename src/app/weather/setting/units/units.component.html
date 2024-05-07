@@ -1,0 +1,25 @@
+<div class="unit__content-container">
+  <div class="unit__content-heading">
+    {{ title | removeUnderscore | titlecase }}
+  </div>
+  <div class="unit__content-buttons">
+    <form #f="ngForm">
+      <label
+        [for]="radio.id"
+        *ngFor="let radio of radioArr.data"
+        class="label {{ radio.value == active ? 'active' : '' }}"
+      >
+        <input
+          type="radio"
+          class="radio"
+          [name]="title | lowercase"
+          [id]="radio.id"
+          [(ngModel)]="selectedOption"
+          [value]="radio.value"
+          (change)="onClick(f)"
+        />
+        {{ radio.label }}
+      </label>
+    </form>
+  </div>
+</div>

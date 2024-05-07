@@ -1,0 +1,19 @@
+<div class="weather__report-box">
+  <div class="date">{{ getDate() }}</div>
+  <div class="week">{{ getWeek() }}</div>
+  <div class="weather__sign">
+    <img
+      src="{{ forecastFuture.icon }}"
+      alt="weather"
+      class="weather__sign-img"
+    />
+    <span class="weather__report-condition-text">
+      {{ getCondtionName() }}
+    </span>
+  </div>
+  <div class="temp">
+    <span class="bold">{{ forecastFuture.mintemp }}</span
+    >/{{ forecastFuture.maxtemp }}<span>&deg;</span
+    >{{ forecastFuture.tempUnit }}
+  </div>
+</div>

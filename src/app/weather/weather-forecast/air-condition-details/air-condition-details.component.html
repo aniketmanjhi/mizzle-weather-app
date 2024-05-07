@@ -1,0 +1,12 @@
+<div class="air__details-container {{ addPadding ? 'activeAddPadding' : '' }}">
+  <div class="air__sign-logo">
+    <i class="{{ airCondition.icons }} signs"></i>
+  </div>
+  <div class="air__detail">
+    <div class="air__details-name">{{ getName() }}</div>
+    <div class="air__details-temp">
+      {{ airCondition.value
+      }}<span *ngIf="getName() == 'Feels Like'">&deg;</span>
+    </div>
+  </div>
+</div>

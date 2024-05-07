@@ -1,0 +1,49 @@
+<div class="start__container">
+  <div class="start__left">
+    <img
+      src="../../assets/background.png"
+      alt="logo"
+      class="background__logo-start"
+    />
+    <div class="circle__big"></div>
+    <div class="circle__small"></div>
+  </div>
+  <div class="start__right">
+    <div class="start__details">
+      <img src="../../assets/logo.png" alt="logo" class="logo-start" />
+      <div class="title__details">
+        <h1 class="title__name">Mizzle</h1>
+
+        <h3 class="title__description">Weather App</h3>
+      </div>
+      <form [formGroup]="searchForm">
+        <div class="search-box">
+          <input
+            type="text"
+            placeholder="Enter location"
+            class="search__input-start"
+            formControlName="search"
+          />
+          <p
+            *ngIf="
+              !searchForm.get('search').valid &&
+              searchForm.get('search').touched
+            "
+            class="warning__message"
+          >
+            Enter Location
+          </p>
+        </div>
+        <button
+          routerLink="/weather/weather-forecast"
+          [queryParams]="{ search: this.searchForm.get('search').value }"
+          type="button"
+          class="btn__submit-start"
+          [disabled]="!searchForm.valid"
+        >
+          Let's Go
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

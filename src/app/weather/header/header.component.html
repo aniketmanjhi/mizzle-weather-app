@@ -1,0 +1,51 @@
+<div class="navigation__control">
+  <nav class="navigation">
+    <a routerLink="/" class="nav__logo">
+      <img
+        src="../../assets/logo.png"
+        alt="logo"
+        class="logo-weather"
+        [ngClass]="{ 'logo__weather-slideLeft': !searchToggle }"
+      />
+    </a>
+
+    <ul class="navigation__links">
+      <li>
+        <button
+          class="search__btn"
+          [ngClass]="{ 'search__btn-slideRight': !searchToggle }"
+          (click)="onSearchToggle()"
+        >
+          <i
+            class="ri-search-2-line icon search__icon"
+            [ngStyle]="{ display: searchToggle ? 'initial' : 'none' }"
+          ></i>
+          <i
+            class="ri-close-line icon cancel__icon"
+            [ngStyle]="{ display: !searchToggle ? 'initial' : 'none' }"
+          ></i>
+        </button>
+      </li>
+      <li>
+        <a
+          [routerLink]="['weather-forecast']"
+          [queryParams]="queryParams"
+          routerLinkActive="active__link"
+          class="navigation__link navigation__link-weather"
+          [ngClass]="{ 'navigation__link-slideRight': !searchToggle }"
+          ><i class="ri-heavy-showers-fill"></i> <span>Weather</span>
+        </a>
+      </li>
+      <li>
+        <a
+          [routerLink]="['setting']"
+          [queryParams]="queryParams"
+          routerLinkActive="active__link"
+          class="navigation__link navigation__link-settings"
+          [ngClass]="{ 'navigation__link-slideRight': !searchToggle }"
+          ><i class="ri-tools-fill"></i> <span>Settings</span></a
+        >
+      </li>
+    </ul>
+  </nav>
+</div>

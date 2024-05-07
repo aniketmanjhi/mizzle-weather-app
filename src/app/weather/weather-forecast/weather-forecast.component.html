@@ -1,0 +1,114 @@
+<div class="weather__container" *ngIf="!error && isFetched">
+  <!-- Current Weather -->
+  <div class="current__weather">
+    <!-- City Weather -->
+    <div class="current__weather-box city__weather">
+      <div class="city__weather-detail">
+        <div class="city__detail">
+          <h3 class="city__name">
+            {{ cityName
+            }}<span class="city__region">, {{ cityRegionName }}</span>
+          </h3>
+          <div class="weather__condition">{{ currentCondition }}</div>
+        </div>
+        <div class="city__temp">{{ cityTemp }}<span>&deg;</span></div>
+      </div>
+
+      <div class="weather__sign">
+        <img
+          src="{{ currentConditionImage }}"
+          alt="weather-sign"
+          class="weather__sign-image"
+        />
+      </div>
+    </div>
+
+    <!-- Today Weather -->
+    <div
+      class="current__weather-box today__forecast"
+      *ngIf="!isAirConditionMoreOpen"
+      [ngClass]="{ animation__none: animationNone }"
+    >
+      <h3 class="today__forecast-heading">Today's Forecast</h3>
+      <div class="today__forecast-box">
+        <div class="today__forecast-hours">
+          <app-today-forecast
+            [hourData]="hour"
+            [hour]="i"
+            [hourCurrent]="hourCurrentUI"
+            *ngFor="let hour of hours; let i = index"
+          ></app-today-forecast>
+        </div>
+      </div>
+    </div>
+
+    <!-- Air Condition -->
+    <div
+      class="current__weather-box air__condition"
+      *ngIf="!isAirConditionMoreOpen"
+      [ngClass]="{ animation__none: animationNone }"
+    >
+      <div class="air__condition-headingBox">
+        <h3 class="air__condition-heading">air conditions</h3>
+        <button class="air__condition-seeMoreBtn" (click)="onSeeMore()">
+          See more
+        </button>
+      </div>
+      <div class="air__condition-details">
+        <app-air-condition-details
+          [addPadding]="addPaddingOnBox"
+          [airCondition]="less"
+          *ngFor="let less of airConditionLess"
+        ></app-air-condition-details>
+      </div>
+    </div>
+    <!-- Air Condtion More -->
+    <div
+      class="current__weather-box air__condition-seeless-box"
+      *ngIf="isAirConditionMoreOpen"
+    >
+      <div class="seeless__btn-box">
+        <h3 class="air__condition-heading-black">air conditions</h3>
+        <button class="air__condition-seeLessBtn" (click)="onSeeLess()">
+          See less
+        </button>
+      </div>
+      <div class="air__condition-seeless-grid">
+        <app-air-condition-details
+          [addPadding]="addPaddingOnBox"
+          [airCondition]="more"
+          *ngFor="let more of airConditionMore"
+        ></app-air-condition-details>
+      </div>
+    </div>
+  </div>
+
+  <!-- Future Weather -->
+  <div class="future__weather">
+    <h3 class="future__weather-heading">7-days Weather Report</h3>
+    <div class="weather__reports">
+      <app-weather-days-forecast
+        [forecastFuture]="forecast"
+        [TodayIndex]="i"
+        *ngFor="let forecast of forecastFuture; let i = index"
+      ></app-weather-days-forecast>
+    </div>
+  </div>
+</div>
+
+<div class="error__message-boxOuter" *ngIf="error" (click)="onRetry()">
+  <div class="error__message-boxInner">
+    <div class="error__message-upper">
+      <i class="ri-emotion-sad-line error__image"></i>
+      <h4 class="error__message-error">Error</h4>
+    </div>
+    <div class="error__message-lower">
+      <div class="error__message-text">{{ error }}</div>
+      <button class="retry-btn" (click)="onRetry()">Retry</button>
+    </div>
+  </div>
+</div>
+
+<div class="loader__box" *ngIf="isLoaded && !error">
+  <span class="loader"></span>
+</div>

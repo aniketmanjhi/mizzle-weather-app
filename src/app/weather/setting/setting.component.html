@@ -1,0 +1,13 @@
+<div class="setting__container">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="setting__units">
+      <h3 class="setting__units-heading">Units</h3>
+      <div class="setting__units-container">
+        <app-units
+          *ngFor="let setting of settings"
+          [radioArr]="setting"
+        ></app-units>
+      </div>
+    </div>
+  </form>
+</div>

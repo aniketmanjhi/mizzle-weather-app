@@ -1,0 +1,67 @@
+.container__weather {
+  display: flex;
+  gap: 1rem;
+  height: 100%;
+  width: 100%;
+}
+main {
+  width: calc(100% - 13rem);
+}
+
+.weather__data {
+  height: calc(100% - 4rem);
+  padding-top: 1rem;
+}
+
+/* ----------------Responsive------------- */
+@media only screen and (max-width: 1630px),
+  only screen and (max-height: 988px) {
+  .weather__data {
+    height: calc(100% - 3.5rem);
+  }
+  main {
+    width: calc(100% - 11rem);
+  }
+}
+@media only screen and (max-width: 1366px),
+  only screen and (max-height: 855px) {
+  .weather__data {
+    height: calc(100% - 3rem);
+  }
+  main {
+    width: calc(100% - 9.2rem);
+  }
+}
+@media only screen and (max-width: 1280px),
+  only screen and (max-height: 766px) {
+  .weather__data {
+    height: calc(100% - 2.9rem);
+  }
+  main {
+    width: calc(100% - 7.8rem);
+  }
+  .weather__data {
+    border-radius: 20px;
+  }
+}
+
+/* ----------------Tablet_Responsive------------- */
+@media only screen and (width <= 920px) and (height <= 1368px) {
+  .container__weather {
+    gap: 0;
+  }
+  main {
+    width: 100%;
+  }
+  .weather__data {
+    height: calc(100% - 3.7rem);
+  }
+}
+
+/* ----------------Mobile Responsive------------- */
+@media only screen and (width <= 535px) {
+  .weather__data {
+    height: calc(100% - 3.4rem);
+    padding: 0;
+  }
+}

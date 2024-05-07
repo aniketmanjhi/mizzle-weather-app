@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container p {
+  background: var(--background-color__btn);
+  color: var(--color__white);
+  padding: 2rem 4rem;
+  border-radius: 20px;
+  font-weight: 700;
+  border: 2px solid whitesmoke;
+  font-size: 2rem;
+}
+
+@media (width<=520px) {
+  .container p {
+    padding: 2rem 4rem;
+    font-size: 1rem;
+  }
+}
