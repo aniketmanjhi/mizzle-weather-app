@@ -553,8 +553,7 @@
   }
 }
 
-@media only screen and (max-width: 1280px),
-  only screen and (max-height: 766px) {
+@media only screen and (max-height: 766px) {
   /* heading */
   .today__forecast-heading,
   .air__condition-heading,
@@ -629,6 +628,81 @@
     width: 40px;
     height: 40px;
     border: 8px solid #dde0e4;
+  }
+}
+
+@media only screen and (max-width: 1366px) and (max-height: 700px) {
+  /* heading */
+  .today__forecast-heading,
+  .air__condition-heading,
+  .air__condition-heading-black,
+  .future__weather-heading {
+    font-size: 11px;
+  }
+
+  /* Current city */
+  .city__weather {
+    padding: 0.2rem 1.8rem;
+  }
+  .city__name {
+    font-size: 1.6rem;
+  }
+  .city__region {
+    font-size: 0.7rem;
+  }
+  .weather__condition {
+    font-size: 12px;
+  }
+  .city__temp {
+    font-size: 3rem;
+  }
+  .weather__sign {
+    width: 250px;
+  }
+  .weather__sign-image {
+    width: 5.5rem;
+  }
+
+  /* heading padding */
+  .today__forecast,
+  .air__condition {
+    padding: 12px 1.2rem;
+  }
+
+  /* Today Forecast */
+  .today__forecast-box {
+    margin-top: 10px;
+  }
+  .today__forecast-hours {
+    padding-bottom: 8px;
+  }
+
+  .today__forecast-hours::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  /* air__condition See more Btn */
+  .air__condition-details {
+    padding-top: 8px;
+  }
+  .air__condition-seeMoreBtn {
+    font-size: 10px;
+  }
+
+  /* air__condition See less*/
+  .air__condition-seeLessBtn {
+    font-size: 10px;
+    padding: 4px 13px 4px 13px;
+  }
+}
+
+@media only screen and (max-width: 1280px) and (max-height: 600px) {
+  /* Today Forecast */
+  .today__forecast-hours {
+    padding-bottom: 6px;
+  }
+  .today__forecast-hours::-webkit-scrollbar {
+    height: 6px;
   }
 }
 
@@ -728,7 +802,7 @@
 }
 
 /* ----------------Tablet Responsive------------- */
-@media only screen and (width <= 920px) and (height <= 1368px) {
+@media only screen and (max-width: 920px) and (max-height: 1368px) {
   .weather__container {
     grid-template-rows: 97.5% 64%;
     gap: 2.8rem;
@@ -833,7 +907,7 @@
   }
 }
 
-@media only screen and (width <= 770px) and (height <= 1100px) {
+@media only screen and (max-width: 770px) and (max-height: 1100px) {
   /* heading */
   .today__forecast-heading,
   .air__condition-heading,
@@ -889,7 +963,7 @@
   }
 }
 
-@media screen and (width <= 700px) and (height <= 998px) {
+@media screen and (max-width: 700px) and (max-height: 998px) {
   .weather__container {
     grid-template-rows: 99% 64%;
   }
@@ -954,7 +1028,7 @@
   }
 }
 
-@media screen and (width <= 630px) and (height <= 940px) {
+@media screen and (max-width: 630px) and (max-height: 940px) {
   .weather__sign {
     width: 130px;
   }
@@ -964,7 +1038,7 @@
   }
 }
 
-@media screen and (width <= 615px) and (height <= 860px) {
+@media screen and (max-width: 615px) and (max-height: 860px) {
   /* heading */
   .today__forecast-heading,
   .air__condition-heading,
@@ -1024,7 +1098,7 @@
 }
 
 /* ----------------Mobile Responsive------------- */
-@media only screen and (width <= 535px) {
+@media only screen and (max-width: 535px) {
   /* heading */
   .today__forecast-heading,
   .air__condition-heading,
@@ -1073,7 +1147,7 @@
   }
 }
 
-@media only screen and (width <= 455px) {
+@media only screen and (max-width: 455px) {
   /* heading */
   .today__forecast-heading,
   .air__condition-heading,

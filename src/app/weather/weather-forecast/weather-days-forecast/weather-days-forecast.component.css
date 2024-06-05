@@ -4,7 +4,7 @@
   align-items: center;
   gap: 1rem;
   border-bottom: 1px solid rgba(128, 128, 128, 0.637);
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 0 0.8rem 1rem 0.8rem;
 }
 .weather__report-inner {
@@ -107,20 +107,27 @@
   }
 }
 
-@media only screen and (max-width: 1280px) {
-  .weather__report-box {
-    grid-template-columns: 1fr 2fr 1fr;
-  }
-
-  .week {
-    display: none;
-    visibility: hidden;
-  }
-
+@media only screen and (max-width: 1366px) and (max-height: 700px) {
   .weather__report-condition-text,
   .date,
+  .week,
   .temp {
-    font-size: 1rem;
+    font-size: 13px;
+  }
+  .weather__sign-img {
+    width: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1280px) and (max-height: 600px) {
+  .weather__report-condition-text,
+  .date,
+  .week,
+  .temp {
+    font-size: 12px;
+  }
+  .weather__sign-img {
+    width: 1.8rem;
   }
 }
 
@@ -142,7 +149,7 @@
   }
 }
 
-@media only screen and (width <= 920px) and (height <= 1368px) {
+@media only screen and (max-width: 920px) and (max-height: 1368px) {
   .weather__report-box {
     justify-items: start;
     padding-bottom: 1rem;
@@ -162,7 +169,7 @@
 }
 
 /* ----------------Tablet Responsive------------- */
-@media only screen and (width <= 770px) and (height <= 1100px) {
+@media only screen and (max-width: 770px) and (max-height: 1100px) {
   .weather__report-box {
     padding-bottom: 0.8rem;
   }
@@ -177,7 +184,7 @@
     width: 3.2rem;
   }
 }
-@media only screen and (width <= 700px) and (height <= 998px) {
+@media only screen and (max-width: 700px) and (max-height: 998px) {
   .weather__report-box {
     padding: 0.2rem 0;
   }
@@ -194,7 +201,7 @@
 }
 
 /* ----------------Mobile Responsive------------- */
-@media only screen and (width <= 615px) and (height <= 860px) {
+@media only screen and (max-width: 615px) and (max-height: 860px) {
   .weather__report-box {
     gap: 0.2rem;
   }
@@ -208,7 +215,7 @@
     width: 2.2rem;
   }
 }
-@media only screen and (width <= 535px) {
+@media only screen and (max-width: 535px) {
   .weather__report-condition-text,
   .date,
   .temp,

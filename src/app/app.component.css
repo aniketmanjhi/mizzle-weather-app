@@ -42,7 +42,7 @@
   z-index: 100;
 }
 /* ----------------Responsive------------- */
-@media screen and (width <= 1600px), (height<=900px) {
+@media screen and (max-width: 1600px), (max-height: 900px) {
   .circle {
     width: 55rem;
     height: 55rem;
@@ -54,7 +54,7 @@
     bottom: -35%;
   }
 }
-@media screen and (width <= 1440px) {
+@media screen and (max-width: 1440px) {
   .circle {
     width: 50rem;
     height: 50rem;
@@ -67,19 +67,19 @@
     bottom: -30%;
   }
 }
-@media screen and (width <= 1366px), (height<= 768px) {
+@media screen and (max-width: 1366px), (max-height: 768px) {
   .circle {
     width: 45rem;
     height: 45rem;
   }
 }
-@media screen and (width <= 1280px), (height<= 720px) {
+@media screen and (max-width: 1280px), (max-height: 720px) {
   .circle {
     width: 40rem;
     height: 40rem;
   }
 }
-@media screen and (width <= 1100px) {
+@media screen and (max-width: 1100px) {
   .circle {
     width: 35rem;
     height: 35rem;
@@ -87,13 +87,13 @@
 }
 
 /* ----------------Tablet Responsive------------- */
-@media screen and (width <= 630px) and (height <= 940px) {
+@media screen and (max-width: 630px) and (max-height: 940px) {
   .container {
     padding: 1rem;
   }
 }
 /* ----------------Mobile Responsive------------- */
-@media only screen and (width <= 535px) {
+@media only screen and (max-width: 535px) {
   .container {
     padding: 0.7rem;
   }

@@ -15,7 +15,7 @@
   font-size: 2rem;
 }
 
-@media (width<=520px) {
+@media (max-width: 520px) {
   .container p {
     padding: 2rem 4rem;
     font-size: 1rem;

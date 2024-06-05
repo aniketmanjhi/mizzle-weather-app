@@ -142,7 +142,7 @@
 }
 
 /* ----------------Tablet Responsive------------- */
-@media only screen and (width <= 920px) and (height <= 1368px) {
+@media only screen and (max-width: 920px) and (max-height: 1368px) {
   .navigation__control {
     padding: 0;
     width: 100%;
@@ -197,7 +197,7 @@
   }
 }
 
-@media only screen and (width <= 700px) and (height <= 998px) {
+@media only screen and (max-width: 700px) and (max-height: 998px) {
   .navigation__control {
     height: 5rem;
   }
@@ -212,7 +212,7 @@
   }
 }
 
-@media only screen and (width <= 630px) and (height <= 940px) {
+@media only screen and (max-width: 630px) and (max-height: 940px) {
   .search__btn {
     display: initial;
     border-radius: 50%;
@@ -265,7 +265,7 @@
 }
 
 /* ----------------Mobile Responsive------------- */
-@media only screen and (width <= 535px) {
+@media only screen and (max-width: 535px) {
   .navigation__control {
     height: 4.5rem;
   }
@@ -283,7 +283,7 @@
     transform: translateX(8.2rem);
   }
 }
-@media only screen and (width <= 455px) {
+@media only screen and (max-width: 455px) {
   .navigation {
     padding: 0 1.5rem;
   }
@@ -291,7 +291,7 @@
     transform: translateX(8rem);
   }
 }
-@media only screen and (width <= 384px) {
+@media only screen and (max-width: 384px) {
   .navigation {
     padding: 0 1.2rem;
   }

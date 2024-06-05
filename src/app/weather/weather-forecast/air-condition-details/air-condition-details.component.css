@@ -1,7 +1,5 @@
 .air__details-container {
   height: 100%;
-  /* display: flex;
-  align-items: center; */
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
@@ -109,22 +107,37 @@
   }
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1366px) and (max-height: 700px) {
   .signs {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
   .air__details-name {
-    font-size: 1rem;
+    font-size: 13px;
   }
   .air__details-temp {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
   }
   .activeAddPadding {
-    padding-left: 1rem;
+    padding: 6px 15px;
   }
 }
 
-@media only screen and (width <= 920px) and (height <= 1368px) {
+@media only screen and (max-width: 1280px) and (max-height: 600px) {
+  .signs {
+    font-size: 1rem;
+  }
+  .air__details-name {
+    font-size: 11px;
+  }
+  .air__details-temp {
+    font-size: 1.1rem;
+  }
+  .activeAddPadding {
+    padding: 6px 15px;
+  }
+}
+
+@media only screen and (max-width: 920px) and (max-height: 1368px) {
   .signs {
     font-size: 2.3rem;
   }
@@ -137,7 +150,7 @@
 }
 
 /* ----------------Tablet Responsive------------- */
-@media only screen and (width <= 770px) and (height <= 1100px) {
+@media only screen and (max-width: 770px) and (max-height: 1100px) {
   .signs {
     font-size: 2.1rem;
   }
@@ -148,7 +161,7 @@
     font-size: 2.2rem;
   }
 }
-@media only screen and (width <= 700px) and (height <= 998px) {
+@media only screen and (max-width: 700px) and (max-height: 998px) {
   .signs {
     font-size: 1.9rem;
   }
@@ -159,7 +172,7 @@
     font-size: 2rem;
   }
 }
-@media only screen and (width <= 615px) and (height <= 860px) {
+@media only screen and (max-width: 615px) and (max-height: 860px) {
   .signs {
     font-size: 1.5rem;
   }
@@ -172,7 +185,7 @@
 }
 
 /* ----------------Mobile Responsive------------- */
-@media only screen and (width <= 535px) {
+@media only screen and (max-width: 535px) {
   .signs {
     font-size: 1.3rem;
   }
@@ -183,7 +196,7 @@
     font-size: 1.6rem;
   }
 }
-@media only screen and (width <= 455px) {
+@media only screen and (max-width: 455px) {
   .signs {
     font-size: 1.15rem;
   }

@@ -41,8 +41,17 @@
   }
 }
 
+@media only screen and (max-width: 1366px) and (max-height: 700px) {
+  .setting__units-heading {
+    font-size: 1.2rem;
+  }
+  .setting__units-container {
+    gap: 1rem;
+  }
+}
+
 /* ----------------Tablet Responsive------------- */
-@media only screen and (width <= 630px) {
+@media only screen and (max-width: 630px) {
   .setting__container {
     width: 100%;
   }
@@ -53,7 +62,7 @@
 }
 
 /* ----------------Mobile  Responsive------------- */
-@media only screen and (width <= 535px) {
+@media only screen and (max-width: 535px) {
   .setting__units {
     margin-top: 1rem;
   }

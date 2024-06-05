@@ -46,7 +46,7 @@ main {
 }
 
 /* ----------------Tablet_Responsive------------- */
-@media only screen and (width <= 920px) and (height <= 1368px) {
+@media only screen and (max-width: 920px) and (max-height: 1368px) {
   .container__weather {
     gap: 0;
   }
@@ -59,7 +59,7 @@ main {
 }
 
 /* ----------------Mobile Responsive------------- */
-@media only screen and (width <= 535px) {
+@media only screen and (max-width: 535px) {
   .weather__data {
     height: calc(100% - 3.4rem);
     padding: 0;

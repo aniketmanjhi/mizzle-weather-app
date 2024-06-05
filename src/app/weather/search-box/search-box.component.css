@@ -66,7 +66,7 @@
 }
 
 /* ----------------Tablet Responsive------------- */
-@media only screen and (width <= 920px) and (height <= 1368px) {
+@media only screen and (max-width: 920px) and (max-height: 1368px) {
   .search__weather-box {
     margin-top: -0.5rem;
     width: 50%;
@@ -80,13 +80,13 @@
     font-size: 1.4rem;
   }
 }
-@media only screen and (width <= 700px) and (height <= 998px) {
+@media only screen and (max-width: 700px) and (max-height: 998px) {
   .search__weather-box {
     left: 18%;
     top: 22px;
   }
 }
-@media only screen and (width <= 630px) and (height <= 940px) {
+@media only screen and (max-width: 630px) and (max-height: 940px) {
   .search__weather-box {
     visibility: hidden;
     left: 4%;
@@ -118,7 +118,7 @@
 }
 
 /* ----------------Mobile Responsive------------- */
-@media only screen and (width <= 535px) {
+@media only screen and (max-width: 535px) {
   .search__weather-box {
     width: 85%;
   }
@@ -126,12 +126,12 @@
     font-size: 1rem;
   }
 }
-@media only screen and (width <= 455px) {
+@media only screen and (max-width: 455px) {
   .search__weather-box {
     width: 83%;
   }
 }
-@media only screen and (width <= 384px) {
+@media only screen and (max-width: 384px) {
   .search__weather-box {
     width: 79%;
   }
